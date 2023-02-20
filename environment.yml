@@ -5,3 +5,5 @@ dependencies:
   - python
   - rise
   - jupyter_contrib_nbextensions
+  - qiskit
+  - qiskit[visualization]

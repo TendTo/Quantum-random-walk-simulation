@@ -2,4 +2,5 @@
 !.gitignore
 !environment.yml
 !QuantumWalk.ipynb
+!postBuild
 !README.md
