@@ -1,0 +1,5 @@
+*
+!.gitignore
+!environment.yml
+!QuantumWalk.ipynb
+!README.md

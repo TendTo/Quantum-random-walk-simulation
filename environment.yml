@@ -1,0 +1,7 @@
+name: rise-environment
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - rise
+  - jupyter_contrib_nbextensions
