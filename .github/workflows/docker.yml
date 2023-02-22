@@ -1,0 +1,36 @@
+name: Docker CI
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Docker jupyter notebook presentation
+        uses: docker/build-push-action@v2.5.0
+        with:
+          # Build's context is the set of files located in the specified PATH or URL
+          context: .
+          # Whether to push the image
+          push: true
+          # Tag to assign the image
+          tags: tendto/quantum:quantum-walk
+ 
