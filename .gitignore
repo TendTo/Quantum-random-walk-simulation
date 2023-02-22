@@ -4,3 +4,5 @@
 !QuantumWalk.ipynb
 !postBuild
 !README.md
+!run.sh
+!Dockerfile
