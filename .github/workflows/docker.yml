@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Copy notebook
+        run: cp QuantumWalk.ipynb docker
+
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:

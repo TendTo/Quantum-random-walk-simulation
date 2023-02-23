@@ -11,4 +11,4 @@ RUN pip3 install qiskit qiskit[visualization]
 RUN jupyter-nbextension enable splitcell/splitcell
 RUN jupyter-nbextension enable hide_input/main
 
-COPY ../QuantumWalk.ipynb .
+COPY QuantumWalk.ipynb .
