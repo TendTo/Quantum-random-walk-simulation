@@ -6,7 +6,7 @@
 !README.md
 !run.sh
 !Dockerfile
-!docker.yml
+!docker/
 !.github/
 !.github/*
 !.github/workflows/docker.yml
